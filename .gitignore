@@ -1,0 +1,109 @@
+#########################################
+# BACKEND
+#########################################
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python bytecode caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Django local settings
+local_settings.py
+
+# Django secret keys or private configs
+.env
+*.env
+
+# Logs
+*.log
+
+#########################################
+# DATABASE (POSTGRES)
+#########################################
+
+# PostgreSQL data folders
+postgres-data/
+pgdata/
+pg_data/
+data/
+
+#########################################
+# STATIC & MEDIA FILES
+#########################################
+
+# Django collected static files
+static/
+staticfiles/
+
+# Uploaded media (user-generated)
+media/
+
+#########################################
+# FRONTEND
+#########################################
+
+# Node dependencies
+/frontend/node_modules/
+/frontend/.pnp
+/frontend/.pnp.js
+
+# Build output
+/frontend/build/
+/frontend/dist/
+/frontend/.next/
+/frontend/out/
+
+# Frontend environment files
+/frontend/.env
+/frontend/*.env
+
+# Vercel and local preview outputs
+/frontend/.vercel/
+
+#########################################
+# EDITOR / OS FILES
+#########################################
+
+# VSCode
+.vscode/
+
+# JetBrains
+.idea/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+
+
+# Python packaging
+*.egg
+*.egg-info/
+eggs/
+parts/
+sdist/
+var/
+
+# Backup and temporary files
+*.bak
+*.tmp
+*.swp
+*.swo
+*~
+
+# pipenv, poetry and other virtual env managers
+Pipfile.lock
+poetry.lock
