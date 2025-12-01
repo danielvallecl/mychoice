@@ -1,0 +1,230 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Apply Poppins everywhere */
+html,
+body,
+#root,
+* {
+  font-family: "Poppins", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Theme colors */
+:root {
+  --primary-peach: #f2b579;
+  --primary-teal: #8ed6dc;
+}
+
+/* Make root elements fill the screen */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Background + main centering container */
+.app-root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  background: radial-gradient(
+      circle at top,
+      rgba(242, 181, 121, 0.28),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at bottom,
+      rgba(142, 214, 220, 0.3),
+      transparent 60%
+    ),
+    #f9fafb;
+}
+
+/* Outer card container */
+.app-shell {
+  width: 100%;
+  max-width: 960px;
+  padding: 24px;
+  border-radius: 18px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: linear-gradient(
+      145deg,
+      rgba(242, 181, 121, 0.06),
+      rgba(142, 214, 220, 0.04)
+    ),
+    #ffffff;
+}
+
+/* Title text */
+.app-title {
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* Alert spacing */
+.app-alert {
+  margin-bottom: 16px;
+}
+
+/* Two-column layout */
+.app-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+}
+
+/* Shared column styling */
+.app-column {
+  flex: 1;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* Subtle column separation */
+.app-column--left {
+  border-right: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.app-column--right {
+  border-left: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/* Column header (title + button) */
+.app-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* Loader centering */
+.app-loading {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+/* Individual item in the list */
+.app-item-card {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  background: linear-gradient(
+      135deg,
+      rgba(242, 181, 121, 0.06),
+      rgba(142, 214, 220, 0.04)
+    ),
+    #ffffff;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  transition: background-color 0.18s ease, border-color 0.18s ease,
+    box-shadow 0.18s ease, transform 0.1s ease;
+}
+
+/* Hover styling for items */
+.app-item-card:hover {
+  border-color: rgba(242, 181, 121, 0.9);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.18);
+  transform: translateY(-1px);
+}
+
+/* Selected item styling */
+.app-item-card--selected {
+  border-color: var(--primary-teal);
+  background: linear-gradient(
+      135deg,
+      rgba(142, 214, 220, 0.18),
+      rgba(242, 181, 121, 0.02)
+    ),
+    #ffffff;
+  box-shadow: 0 0 0 1px rgba(142, 214, 220, 0.6),
+    0 6px 14px rgba(15, 23, 42, 0.2);
+}
+
+/* Item text styling */
+.app-item-title {
+  font-weight: 600;
+}
+
+.app-item-subtitle {
+  opacity: 0.8;
+}
+
+/* Divider between sections */
+.app-divider {
+  border-bottom: 1px solid #e0e0e0;
+  margin: 18px 0;
+}
+
+/* Main action button */
+.app-primary-button {
+  background-color: var(--primary-peach) !important;
+  color: #303030 !important;
+  font-weight: 600;
+  text-transform: none;
+  box-shadow: 0 3px 8px rgba(242, 181, 121, 0.55);
+}
+
+.app-primary-button:hover {
+  background-color: #f0a55c !important;
+  box-shadow: 0 6px 14px rgba(242, 181, 121, 0.7);
+}
+
+/* Secondary outline button */
+.app-secondary-button {
+  border-color: var(--primary-teal) !important;
+  color: #0f3f44 !important;
+  text-transform: none;
+  font-weight: 500;
+}
+
+.app-secondary-button:hover {
+  border-color: #5fc0c7 !important;
+  background-color: rgba(142, 214, 220, 0.12) !important;
+}
+
+/* Mobile layout adjustments */
+@media (max-width: 900px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .app-column--left,
+  .app-column--right {
+    border: none;
+  }
+
+  .app-shell {
+    padding: 20px 16px;
+  }
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+  .app-root {
+    padding: 16px;
+  }
+
+  .app-shell {
+    padding: 16px 12px;
+    border-radius: 14px;
+  }
+
+  .app-title {
+    text-align: left;
+    font-size: 1.4rem;
+  }
+}

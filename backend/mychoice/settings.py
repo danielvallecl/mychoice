@@ -74,8 +74,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mychoice.wsgi.application'
 
-# Using PostgreSQL as the database with mychoice credentials
-
+# Using PostgreSQL instead of SQLite as the database with mychoice credentials
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -86,7 +85,6 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
