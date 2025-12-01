@@ -1,4 +1,7 @@
 import React from "react"
+
+// MUI Components
+
 import {
   Box,
   Typography,
@@ -9,6 +12,7 @@ import {
   CircularProgress,
 } from "@mui/material"
 
+// API Methods
 import { Item, ItemGroup } from "./api"
 
 type ItemEditorProps = {
@@ -40,6 +44,9 @@ const ItemEditor: React.FC<ItemEditorProps> = ({
 }) => {
   return (
     <>
+
+      {/* Editor Title */}
+
       <Typography variant="h6" gutterBottom>
         {selectedId == null ? "Create New Item" : "Edit Item"}
       </Typography>
@@ -47,7 +54,7 @@ const ItemEditor: React.FC<ItemEditorProps> = ({
       <Box component="form" onSubmit={onSubmit}>
         <Stack spacing={2}>
 
-          {/* Name field */}
+          {/* Name Field */}
 
           <TextField
             label="Name"
@@ -59,7 +66,7 @@ const ItemEditor: React.FC<ItemEditorProps> = ({
             fullWidth
           />
 
-          {/* Group select */}
+          {/* Group Select */}
 
           <TextField
             select
@@ -75,6 +82,8 @@ const ItemEditor: React.FC<ItemEditorProps> = ({
               </MenuItem>
             ))}
           </TextField>
+
+          {/* Submit Button */}
 
           <Button
             type="submit"

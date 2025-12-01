@@ -27,12 +27,12 @@ const App: React.FC = () => {
   const [items, setItems] = useState<Item[]>([])
   const [listLoading, setListLoading] = useState(false)
 
-  // Selected item
+  // Selected Item
   const [selectedId, setSelectedId] = useState<number | null>(null)
   const [selectedItem, setSelectedItem] = useState<Item | null>(null)
   const [detailLoading, setDetailLoading] = useState(false)
 
-  // Form state
+  // Form State
   const [name, setName] = useState("")
   const [group, setGroup] = useState<ItemGroup>("Primary")
   const [saving, setSaving] = useState(false)
@@ -44,7 +44,7 @@ const App: React.FC = () => {
     "success",
   )
 
-  // Message Helper
+  // Message Helpers
   const showMessage = (text: string, severity: "success" | "error") => {
     setMessage(text)
     setMessageSeverity(severity)
@@ -58,8 +58,7 @@ const App: React.FC = () => {
     setNameError(null)
   }
 
-  // Load full list
-
+  // Load All Items on Mount
   useEffect(() => {
     const load = async () => {
       setListLoading(true)
@@ -175,7 +174,6 @@ const App: React.FC = () => {
       ) {
         detail = "Item already exists in this group"
       }
-
       showMessage(String(detail), "error")
     } finally {
       setSaving(false)
@@ -188,6 +186,8 @@ const App: React.FC = () => {
         <Typography variant="h4" gutterBottom className="app-title">
           MyChoice – Item Manager
         </Typography>
+
+        {/* Messages */}
 
         {message && (
           <Box className="app-alert">
@@ -204,7 +204,7 @@ const App: React.FC = () => {
         <Box className="app-layout">
 
           {/* Item List Component  */}
-          
+
           <Paper className="app-column app-column--left" elevation={0}>
             <ItemList
               items={items}

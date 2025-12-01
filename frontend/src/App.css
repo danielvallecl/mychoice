@@ -1,7 +1,7 @@
 /* Import Poppins font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* Apply Poppins everywhere */
+/* Apply Poppins Font */
 html,
 body,
 #root,
@@ -184,6 +184,7 @@ body,
 }
 
 /* Secondary outline button */
+
 .app-secondary-button {
   border-color: var(--primary-teal) !important;
   color: #0f3f44 !important;
@@ -196,7 +197,7 @@ body,
   background-color: rgba(142, 214, 220, 0.12) !important;
 }
 
-/* Mobile layout adjustments */
+/* Mobile layout */
 @media (max-width: 900px) {
   .app-layout {
     flex-direction: column;
@@ -212,7 +213,7 @@ body,
   }
 }
 
-/* Smaller screens */
+/* Mobile */
 @media (max-width: 600px) {
   .app-root {
     padding: 16px;
